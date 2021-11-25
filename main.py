@@ -1,10 +1,11 @@
-import networkx as nx
-from solve import *
+import networkx  as nx
+
 from graph_utils import *
+from solve       import *
 
 graph = build_digraph_with_weights()
+assert nx.is_directed_acyclic_graph(graph)   # Our input graphs must be ok
 
-print("Number of nodes: " + str(graph.number_of_nodes()))
-print("Nodes: ", graph.nodes())
-print("Number of edges: " + str(graph.number_of_edges()))
-print("Edges: ", graph.edges(data=True))
+solution = dfs_topological_sort(graph)
+
+print(dict(sorted(solution.items())))

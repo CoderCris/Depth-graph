@@ -19,8 +19,12 @@ def dfs_topological_sort(graph):
     #     {1: 3, 2: 2, 3: 1}
 
     solution = dict()
+    n = graph.number_of_nodes()
+    sight = []
 
-    # solve it here! -------------------------------------------------
+    for 
+
+
 
 
     return solution
